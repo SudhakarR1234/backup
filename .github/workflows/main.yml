@@ -1,5 +1,16 @@
-name: Daily backup
+
+name: Daily Backup
 
 on:
- schedule:
-    -
+  schedule:
+    - cron: '0 3 * * *'
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/google-drive-backup@v1
+        with:
+          drive: '18OP705VJxUGVzJHirgb99fLiUZbD6nOc'
+          paths: '/'
