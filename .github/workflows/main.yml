@@ -13,4 +13,4 @@ jobs:
       - uses: actions/google-drive-backup@v1
         with:
           drive: '18OP705VJxUGVzJHirgb99fLiUZbD6nOc'
-          paths: '/'
+          paths: '.github/workflows/main.yml'
